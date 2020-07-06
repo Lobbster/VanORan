@@ -3,13 +3,20 @@
 
 //ITEMS
 @import "items/component";
+@import "items/logo";
 
 //LAYOUT
+@import "layout/navbar";
+@import "layout/main-page";
 
 //PAGES
+@import "pages/home-page";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Muli", sans-serif;
 }

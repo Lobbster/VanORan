@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  //Font color
+  a {
+    color: $clr-white;
+  }
+
+  //logo
+  &__logo {
+    font-size: 25px;
+  }
+
+  //list
+  &__list {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
