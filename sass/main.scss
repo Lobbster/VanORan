@@ -8,6 +8,7 @@
 //LAYOUT
 @import "layout/navbar";
 @import "layout/main-page";
+@import "layout/input-box";
 
 //PAGES
 @import "pages/home-page";
@@ -19,4 +20,9 @@
   list-style: none;
   text-decoration: none;
   font-family: "Muli", sans-serif;
+}
+
+body,
+html {
+  background-color: $clr-white;
 }
