@@ -1,0 +1,21 @@
+.rental-page {
+  &__nav-container {
+    padding: 0 10% 0 10%;
+    box-shadow: $drp-shad, $in-shad;
+    li {
+      color: $clr-grey;
+    }
+  }
+
+  &__layout {
+    height: 500px;
+    width: 80%;
+    margin: 25px auto;
+    background-color: grey;
+
+    &--application-container {
+    }
+    &--trip-summary {
+    }
+  }
+}

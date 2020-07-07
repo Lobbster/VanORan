@@ -1,11 +1,13 @@
 //COLOR
-$clr-white: #fefe;
+$clr-white: #fefefe;
 $clr-grey: #696969;
-$clr-black: #222;
+$clr-black: #222222;
 
 $clr-blue: #18c8ff;
 $clr-blue-dark: #0eaaed;
 
 //SHADOW
 $text-outline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  2px 2px 0 #000;
+  1px 1px 0 #000;
+$drp-shad: 0px 5px 6px 0px rgba(48, 50, 50, 0.23);
+$in-shad: inset 0px 4px 0px 0px $clr-blue;
