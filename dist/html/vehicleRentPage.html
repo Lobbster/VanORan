@@ -10,8 +10,9 @@
       rel="stylesheet"
     />
     <!-- JAVASCRIPT -->
-    <script src="js/jQuery.js"></script>
-    <script src="js/main.js" defer></script>
+    <script src="/dist/js/jQuery.js"></script>
+    <script src="/dist/js/jQUIEase.js"></script>
+    <script src="/dist/js/main.js" defer></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/dist/css/main.css" />
 
@@ -20,21 +21,42 @@
   <body class="rental-page">
     <div class="rental-page__nav-container">
       <nav class="nav">
-        <a href="/dist/index.html"><div class="nav__logo logo">VanORan</div></a>
-        <ul class="nav__list">
-          <a href="#"><li class="nav__list--items">Vehicles</li></a>
-          <a href="#"> <li class="nav__list--items">Blog</li> </a>
-          <a href="#"> <li class="nav__list--items">About Us</li> </a>
-          <a href="#"> <li class="nav__list--items">Contact Us</li> </a>
-          <a href="vehicleRentPage.html">
-            <li class="nav__list--items">Book Now</li>
+        <div class="nav-bar drop-shad">
+          <a href="/dist/index.html"
+            ><div class="nav-bar__logo logo">VanORan</div></a
+          >
+          <a href="#" class="toggle-btn">
+            <span class="toggle-btn__span add"></span>
+            <span class="toggle-btn__span add"></span>
+            <span class="toggle-btn__span add"></span>
           </a>
-        </ul>
+          <ul class="nav-bar__list">
+            <a href="#"><li class="nav-bar__list--items">Vehicles</li></a>
+            <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
+            <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
+            <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
+            <a href="vehicleRentPage.html">
+              <li class="nav-bar__list--items">Book Now</li>
+            </a>
+          </ul>
+        </div>
+        <div class="nav-menu">
+          <h1 class="nav-menu__title">Menu</h1>
+          <ul class="nav-menu__list">
+            <a href="#"><li class="nav-menu__list--items">Vehicles</li></a>
+            <a href="#"><li class="nav-menu__list--items">Blog</li></a>
+            <a href="#"><li class="nav-menu__list--items">About Us</li></a>
+            <a href="#"><li class="nav-menu__list--items">Contact Us</li></a>
+            <a href="vehicleRentPage.html"
+              ><li class="nav-menu__list--items">Book Now</li></a
+            >
+          </ul>
+        </div>
       </nav>
     </div>
-    <div class="rental-page__layout">
+    <!-- <div class="rental-page__layout">
       <div class="rental-page__layout--application-container"></div>
       <div class="rental-page__layout--trip-summary"></div>
-    </div>
+    </div> -->
   </body>
 </html>

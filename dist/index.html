@@ -11,6 +11,7 @@
     />
     <!-- JAVASCRIPT -->
     <script src="js/jQuery.js"></script>
+    <script src="js/jQUIEase.js"></script>
     <script src="js/main.js" defer></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
@@ -20,17 +21,38 @@
   <body class="home-page">
     <header class="main-page">
       <div class="main-page__container">
-        <nav class="nav">
-          <a href="index.html"><div class="nav__logo logo">VanORan</div></a>
-          <ul class="nav__list">
-            <a href="#"><li class="nav__list--items">Vehicles</li></a>
-            <a href="#"> <li class="nav__list--items">Blog</li> </a>
-            <a href="#"> <li class="nav__list--items">About Us</li> </a>
-            <a href="#"> <li class="nav__list--items">Contact Us</li> </a>
-            <a href="html/vehicleRentPage.html">
-              <li class="nav__list--items">Book Now</li>
+        <nav>
+          <div class="nav-bar">
+            <a href="index.html"
+              ><div class="nav-bar__logo logo">VanORan</div></a
+            >
+            <a href="#" class="toggle-btn">
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
             </a>
-          </ul>
+            <ul class="nav-bar__list">
+              <a href="#"><li class="nav-bar__list--items">Vehicles</li></a>
+              <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
+              <a href="html/vehicleRentPage.html">
+                <li class="nav-bar__list--items">Book Now</li>
+              </a>
+            </ul>
+          </div>
+          <div class="nav-menu">
+            <h1 class="nav-menu__title">Menu</h1>
+            <ul class="nav-menu__list">
+              <a href="#"><li class="nav-menu__list--items">Vehicles</li></a>
+              <a href="#"><li class="nav-menu__list--items">Blog</li></a>
+              <a href="#"><li class="nav-menu__list--items">About Us</li></a>
+              <a href="#"><li class="nav-menu__list--items">Contact Us</li></a>
+              <a href="html/vehicleRentPage.html"
+                ><li class="nav-menu__list--items">Book Now</li></a
+              >
+            </ul>
+          </div>
         </nav>
         <h1 class="main-page__container--title">
           see new zealand <br />

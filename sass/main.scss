@@ -4,11 +4,13 @@
 //ITEMS
 @import "items/component";
 @import "items/logo";
+@import "items/toggle-btn";
 
 //LAYOUT
 @import "layout/navbar";
 @import "layout/main-page";
 @import "layout/input-box";
+@import "layout/nav-menu";
 
 //PAGES
 @import "pages/home-page";
@@ -19,11 +21,11 @@
   list-style: none;
   text-decoration: none;
   font-family: "Muli", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 body,
 html {
-  padding: 0;
-  margin: 0;
   background-color: $clr-white;
 }

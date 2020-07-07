@@ -1,0 +1,27 @@
+.nav-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: $clr-blue;
+  text-align: center;
+  &__title {
+    color: $clr-white;
+    margin: 10px 0px 25px 0px;
+  }
+  &__list {
+    &--items {
+      color: $clr-white !important;
+      padding: 25px;
+      &:hover {
+        background-color: $clr-blue-dark;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .nav-menu {
+    display: none !important;
+  }
+}
