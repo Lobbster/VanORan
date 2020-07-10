@@ -22,6 +22,11 @@
     <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="js/main.js" defer></script>
 
+    <!-- light picker -->
+    <link rel="stylesheet" href="/dist/Lightpick-master/css/lightpick.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="/dist/Lightpick-master/lightpick.js"></script>
+
     <title>VanORan Rentals</title>
   </head>
   <body class="home-page">
@@ -64,14 +69,42 @@
           see new zealand <br />
           at it's finest
         </h1>
-        <div class="inputbox">
-          <div>
-            <label for="from">From</label>
-            <input type="text" class="from" name="from" />
-            <label for="to">to</label>
-            <input type="text" class="to" name="to" />
+        <form action="/" method="GET" class="inputbox">
+          <h3 class="inputbox__subTitle">let's find your perfect vehicle</h3>
+          <div class="inputbox__form">
+            <div class="inputbox__form--pickup">
+              <label for="from">Pick Up</label>
+              <input type="text" id="datepicker-from" required />
+              <select name="location" class="pick-up-location" required>
+                <option disabled selected>Pick Up Location</option>
+                <option value="0">Auckland</option>
+                <option value="1">Wellington</option>
+                <option value="2"> Christchurch</option>
+                <option value="3">Dunedin</option>
+                <option value="4">Queenstown</option>
+              </select>
+            </div>
+            <div class="inputbox__form--dropoff">
+              <label for="drop off">Drop Off</label>
+              <input type="text" id="datepicker-to" required />
+              <select name="location" class="drop-off-location" required>
+                <option disabled selected>Drop Off Location</option>
+                <option value="0">Auckland</option>
+                <option value="1">Wellington</option>
+                <option value="2"> Christchurch</option>
+                <option value="3">Dunedin</option>
+                <option value="4">Queenstown</option>
+              </select>
+            </div>
+            <div class="input__form--peopleCount">
+              <label for="drop off">Party size</label>
+              <input type="text" class="peopleCount" />
+            </div>
           </div>
-        </div>
+          <div class="inputbox__bottom">
+            <button type="submit" class="inputbox__bottom--btn">Search</button>
+          </div>
+        </form>
       </div>
     </header>
   </body>

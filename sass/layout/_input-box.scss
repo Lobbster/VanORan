@@ -1,6 +1,25 @@
 .inputbox {
-  background-color: grey;
   width: 50%;
   max-width: 500px;
-  height: 300px;
+  margin: 3% 10%;
+  color: $clr-white;
+
+  &__form {
+    display: flex;
+
+    &--pickup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--dropoff {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
