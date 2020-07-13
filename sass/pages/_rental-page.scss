@@ -9,11 +9,19 @@
     height: 500px;
     width: 80%;
     margin: 25px auto;
-    background-color: grey;
+    display: flex;
+    justify-content: space-between;
 
     &--application-container {
+      width: 60%;
+      height: 100%;
+      border: 1px black solid;
     }
     &--trip-summary {
+      height: 100%;
+      width: 40%;
+      margin-left: 25px;
+      background-color: $clr-grey-light;
     }
   }
 }

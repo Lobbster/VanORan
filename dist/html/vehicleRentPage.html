@@ -25,6 +25,11 @@
     <script src="/dist/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="/dist/js/main.js" defer></script>
 
+    <!-- light picker -->
+    <link rel="stylesheet" href="/dist/Lightpick-master/css/lightpick.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="/dist/Lightpick-master/lightpick.js"></script>
+
     <title>VanORan Rentals</title>
   </head>
   <body class="rental-page">
@@ -63,9 +68,21 @@
         </div>
       </nav>
     </div>
-    <!-- <div class="rental-page__layout">
-      <div class="rental-page__layout--application-container"></div>
+    <div class="rental-page__layout">
+      <div class="rental-page__layout--application-container">
+        <form action="/" method="GET" class="rentPage-inputBox">
+          <h5 class="rentPage-inputBox__title">
+            LET'S FIND YOUR IDEAL VEHICLE
+          </h5>
+        </form>
+        <div class="vehicleLoadBox">
+          <div class="vehicleLoadBox__results">
+            <h4 class="vehicleLoadBox__results--results">Results</h4>
+            <h5 class="vehicleLoadBox__results--result-count"></h5>
+          </div>
+        </div>
+      </div>
       <div class="rental-page__layout--trip-summary"></div>
-    </div> -->
+    </div>
   </body>
 </html>
