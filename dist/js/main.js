@@ -14,30 +14,28 @@ const submitBtn = $(".inputbox__bottom--btn");
 let pickUpDate = {};
 let dropOffDate = {};
 let rentTimeRange;
-let pickUpLocation = $(".pick-up-location").selectmenu();
-let dropOffLocation = $(".drop-off-location").selectmenu();
-let partySize = $(".peopleCount").spinner({
-  min: 1,
-  max: 6,
-});
-$(".peopleCount").spinner("value", 1);
-// CALENDAR -- LIGHT PICKER
-// let picker = new Lightpick({
-//   field: document.getElementById("datepicker-from"),
-//   secondField: document.getElementById("datepicker-to"),
-//   repick: true,
-//   singleDate: false,
-//   startDate: moment().startOf("month").add(7, "day"),
-//   endDate: moment().add(14, "day"),
-//   minDate: moment().startOf("month").add(0, "day"),
-//   maxDays: 15,
-//   selectForward: true,
-//   onSelect: function (start, end) {
-//     let str = "";
-//     str += start ? start.format("Do MMMM YYYY") + " to " : "";
-//     str += end ? end.format("Do MMMM YYYY") : "...";
-//   },
+// let pickUpLocation = $(".pick-up-location").selectmenu();
+// let dropOffLocation = $(".drop-off-location").selectmenu();
+// let partySize = $(".peopleCount").spinner({
+//   min: 1,
+//   max: 6,
 // });
+// $(".peopleCount").spinner("value", 1);
+// CALENDAR -- LIGHT PICKER
+let picker = new Lightpick({
+  field: document.getElementById("datepicker-from"),
+  secondField: document.getElementById("datepicker-to"),
+  repick: true,
+  singleDate: false,
+
+  maxDays: 15,
+  selectForward: true,
+  onSelect: function (start, end) {
+    let str = "";
+    str += start ? start.format("Do MMMM YYYY") + " to " : "";
+    str += end ? end.format("Do MMMM YYYY") : "...";
+  },
+});
 
 //**********************************
 // Events --------------------------

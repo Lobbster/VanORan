@@ -5,6 +5,10 @@
   z-index: 1;
   background-color: $clr-blue;
   text-align: center;
+
+  @media (min-width: 700px) {
+    display: none !important;
+  }
   &__title {
     color: $clr-white;
     margin: 10px 0px 25px 0px;
@@ -17,11 +21,5 @@
         background-color: $clr-blue-dark;
       }
     }
-  }
-}
-
-@media (min-width: 700px) {
-  .nav-menu {
-    display: none !important;
   }
 }

@@ -36,6 +36,62 @@
   }
 }
 
+.letsGoButton {
+  background-color: #18c8ff;
+  border: none;
+  color: #fefefe;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.letsGoButton:hover {
+  cursor: pointer;
+  background-color: #0eaaed;
+}
+
+.letsGoButton:active {
+  color: #18c8ff;
+  border: none;
+}
+
+.bigBlueButton {
+  width: 200px;
+  height: 30px;
+  background-color: #18c8ff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fefefe;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 0 4px 1px #0eaaed;
+          box-shadow: 0 4px 1px #0eaaed;
+}
+
+.bigBlueButton:hover {
+  background-color: #0eaaed;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bigBlueButton:active {
+  color: #18c8ff;
+  -webkit-box-shadow: 0 4px 1px #18c8ff inset;
+          box-shadow: 0 4px 1px #18c8ff inset;
+}
+
+.bigBlueButton:active h4 {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
 .nav-bar {
   height: 50px;
   z-index: 2;
@@ -118,16 +174,24 @@
 }
 
 .inputbox {
-  width: 50%;
-  max-width: 500px;
-  margin: 3% 10%;
-  color: #fefefe;
+  width: 100%;
+  background-color: #f1f1f1;
+  color: #696969;
+  padding: 15px;
 }
 
 .inputbox__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.inputbox__form label {
+  margin-left: 3px;
 }
 
 .inputbox__form--pickup {
@@ -138,6 +202,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 40%;
+}
+
+.inputbox__form--pickup input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.inputbox__form--pickup select {
+  height: 30px;
 }
 
 .inputbox__form--dropoff {
@@ -148,6 +222,38 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 40%;
+}
+
+.inputbox__form--dropoff input {
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.inputbox__form--dropoff select {
+  height: 30px;
+}
+
+.inputbox__form--peopleCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100px;
+}
+
+.inputbox__form--peopleCount label {
+  margin: 0;
+  text-align: center;
+}
+
+.inputbox__form--peopleCount select {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 .inputbox__bottom {
@@ -168,6 +274,12 @@
   text-align: center;
 }
 
+@media (min-width: 700px) {
+  .nav-menu {
+    display: none !important;
+  }
+}
+
 .nav-menu__title {
   color: #fefefe;
   margin: 10px 0px 25px 0px;
@@ -180,19 +292,6 @@
 
 .nav-menu__list--items:hover {
   background-color: #0eaaed;
-}
-
-@media (min-width: 700px) {
-  .nav-menu {
-    display: none !important;
-  }
-}
-
-.rentPage-inputBox {
-  width: 100%;
-  height: 150px;
-  background-color: #f1f1f1;
-  padding: 10px;
 }
 
 .vehicleLoadBox__results--title {
@@ -291,6 +390,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vehicleResult__order--price {
+  text-align: center;
+}
+
+.vehicleResult__order--price h3,
+.vehicleResult__order--price h5 {
+  margin-bottom: 10px;
+}
+
+.vehicleResult__order--details {
+  font-size: 12px;
+  text-align: center;
+}
+
+.vehicleResult__order--details a {
+  color: #696969;
 }
 
 .rental-page__nav-container li {
@@ -307,6 +427,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1050px) {
+  .rental-page__layout {
+    width: 95%;
+  }
 }
 
 .rental-page__layout--application-container {

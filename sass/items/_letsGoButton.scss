@@ -1,0 +1,19 @@
+.letsGoButton {
+  background-color: $clr-blue;
+  border: none;
+  color: $clr-white;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $clr-blue-dark;
+  }
+  &:active {
+    color: $clr-blue;
+    border: none;
+  }
+}

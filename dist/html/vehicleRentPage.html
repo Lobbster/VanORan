@@ -76,10 +76,56 @@
     </div>
     <div class="rental-page__layout">
       <div class="rental-page__layout--application-container">
-        <form action="/" method="GET" class="rentPage-inputBox">
-          <h5 class="rentPage-inputBox__title">
+        <form action="/" method="GET" class="inputbox">
+          <h3 class="inputBox__title">
             LET'S FIND YOUR IDEAL VEHICLE
-          </h5>
+          </h3>
+          <div class="inputbox__form">
+            <div class="inputbox__form--pickup">
+              <label for="from">Pick Up Date</label>
+              <input type="text" id="datepicker-from" required />
+              <label for="from">Pick Up Location</label>
+
+              <select name="location" class="pick-up-location" required>
+                <option disabled selected>Pick Up Location</option>
+                <option value="0">Auckland</option>
+                <option value="1">Wellington</option>
+                <option value="2"> Christchurch</option>
+                <option value="3">Dunedin</option>
+                <option value="4">Queenstown</option>
+              </select>
+            </div>
+            <div class="inputbox__form--dropoff">
+              <label for="drop off">Drop Off Date</label>
+              <input type="text" id="datepicker-to" required />
+              <label for="drop off">Drop Off Location</label>
+
+              <select name="location" class="drop-off-location" required>
+                <option disabled selected>Drop Off Location</option>
+                <option value="0">Auckland</option>
+                <option value="1">Wellington</option>
+                <option value="2"> Christchurch</option>
+                <option value="3">Dunedin</option>
+                <option value="4">Queenstown</option>
+              </select>
+            </div>
+            <div class="inputbox__form--peopleCount">
+              <label for="partySize">Party Size</label>
+              <select name="partySize" class="partySize" required>
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputbox__bottom">
+            <button type="submit" class="inputbox__bottom--btn bigBlueButton">
+              <h4>Search</h4>
+            </button>
+          </div>
         </form>
         <div class="vehicleLoadBox">
           <div class="vehicleLoadBox__results">
@@ -120,16 +166,20 @@
                 </div>
               </div>
               <div class="vehicleResult__order">
-                <h3 class="vehicleResult__order--priceToatal">NZD: $600</h3>
-                <h5 class="vehicleResult__order--perday">$200/Day</h5>
-                <button class="vehicleResult__order--btn letsGoButton">
-                  Let's Go
-                </button>
-                <a href="#"
-                  ><p class="vehicleResult__order--moreInfo">
-                    Get more details
-                  </p></a
-                >
+                <div class="vehicleResult__order--price">
+                  <h3>NZD: $600</h3>
+                  <h5>$200/Day</h5>
+                  <button class="letsGoButton">
+                    Lets Go
+                  </button>
+                </div>
+                <div class="vehicleResult__order--details">
+                  <a href="#">
+                    <p class="vehicleResult__order--moreInfo">
+                      Get more details <i class="fas fa-external-link-alt"></i>
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

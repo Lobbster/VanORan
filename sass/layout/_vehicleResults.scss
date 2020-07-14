@@ -36,8 +36,6 @@
       li:before {
         content: "✔ ";
       }
-      li {
-      }
     }
     &--iconList {
       width: 150px;
@@ -57,5 +55,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    &--price {
+      text-align: center;
+      h3,
+      h5 {
+        margin-bottom: 10px;
+      }
+    }
+    &--details {
+      font-size: 12px;
+      text-align: center;
+      a {
+        color: $clr-grey;
+      }
+    }
   }
 }

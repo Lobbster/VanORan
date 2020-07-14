@@ -1,0 +1,27 @@
+.bigBlueButton {
+  width: 200px;
+  height: 30px;
+  background-color: $clr-blue;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: $clr-white;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 1px $clr-blue-dark;
+  &:hover {
+    background-color: $clr-blue-dark;
+    transform: translateY(4px);
+
+    box-shadow: none;
+  }
+  &:active {
+    color: $clr-blue;
+    box-shadow: 0 4px 1px $clr-blue inset;
+    h4 {
+      transform: translateY(4px);
+    }
+  }
+}
