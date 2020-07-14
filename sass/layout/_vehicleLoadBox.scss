@@ -1,5 +1,7 @@
 .vehicleLoadBox {
   &__results {
-    border-bottom: 1px solid $clr-grey;
+    &--title {
+      border-bottom: 1px solid $clr-grey;
+    }
   }
 }

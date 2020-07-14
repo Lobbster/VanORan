@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Muli:wght@200;300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="/dist/css/main.css" />
@@ -77,8 +83,55 @@
         </form>
         <div class="vehicleLoadBox">
           <div class="vehicleLoadBox__results">
-            <h4 class="vehicleLoadBox__results--results">Results</h4>
-            <h5 class="vehicleLoadBox__results--result-count"></h5>
+            <h4 class="vehicleLoadBox__results--title">Results</h4>
+            <h5 class="vehicleLoadBox__results--result-count">
+              Toatal Results:
+            </h5>
+          </div>
+          <div class="resultBox">
+            <div class="vehicleResult">
+              <div class="vehicleResult__id">
+                <img
+                  src="https://images.unsplash.com/flagged/photo-1557774894-d113691ad112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1146&q=80"
+                  class="vehicleResult__id--image"
+                  alt=""
+                />
+                <h3 class="vehicleResult__id--name">Motor Home</h3>
+              </div>
+              <div class="vehicleResult__info">
+                <ul class="vehicleResult__info--list">
+                  <li>min Days 2</li>
+                  <li>max Days 15</li>
+                  <li>cool thing</li>
+                </ul>
+                <div class="vehicleResult__info--iconList">
+                  <div>
+                    <i class="fas fa-users"></i>
+                    <h3>2-6</h3>
+                  </div>
+                  <div>
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <h3>4</h3>
+                  </div>
+                  <div>
+                    <i class="fas fa-suitcase"></i>
+                    <h3>6</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="vehicleResult__order">
+                <h3 class="vehicleResult__order--priceToatal">NZD: $600</h3>
+                <h5 class="vehicleResult__order--perday">$200/Day</h5>
+                <button class="vehicleResult__order--btn letsGoButton">
+                  Let's Go
+                </button>
+                <a href="#"
+                  ><p class="vehicleResult__order--moreInfo">
+                    Get more details
+                  </p></a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
