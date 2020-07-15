@@ -7,6 +7,15 @@ const form = $(".inputbox").submit(function (event) {
   event.preventDefault();
 });
 const submitBtn = $(".inputbox__bottom--btn");
+const summativeParentNode = $(".tripSummaryContainer");
+const resultBox = $(".resultBox");
+
+let vehicleArray = [];
+
+let daysRentingContainer = summativeParentNode.find(".daysRentingContainer");
+let partySizeContainer = summativeParentNode.find(".partySizeContainer");
+let pickUpDateContainer = summativeParentNode.find(".pickUpDateContainer");
+let dropOffDateCOntainer = summativeParentNode.find(".dropOffDateCOntainer");
 
 //**********************************
 // INPUT FEILD ---------------------
@@ -14,13 +23,9 @@ const submitBtn = $(".inputbox__bottom--btn");
 let pickUpDate = {};
 let dropOffDate = {};
 let rentTimeRange;
-// let pickUpLocation = $(".pick-up-location").selectmenu();
-// let dropOffLocation = $(".drop-off-location").selectmenu();
-// let partySize = $(".peopleCount").spinner({
-//   min: 1,
-//   max: 6,
-// });
-// $(".peopleCount").spinner("value", 1);
+let partySize = form.find(".partySize");
+let partySizeNumberCount = 1;
+
 // CALENDAR -- LIGHT PICKER
 let picker = new Lightpick({
   field: document.getElementById("datepicker-from"),
@@ -38,24 +43,124 @@ let picker = new Lightpick({
 });
 
 //**********************************
+// INITALISE -----------------------
+//**********************************
+let init = () => {
+  $.getJSON("/dist/json/vehicles.json", (data) => {
+    vehicleArray = data.vehicles;
+    generateVehicleOptions(vehicleArray);
+  });
+};
+
+//**********************************
+// GENERATE OPTIONS ----------------
+//**********************************
+let generateVehicleOptions = (arrayInput) => {
+  let html = "";
+  for (i = 0; i < arrayInput.length; i++) {
+    html += makeVehicleOptionsd(arrayInput[i]);
+  }
+  resultBox.html(html);
+};
+
+let makeVehicleOptionsd = (vehicleObject) => {
+  return `
+  <div class="vehicleResult">
+              <div class="vehicleResult__id">
+                <img
+                  src="${vehicleObject.image}"
+                  class="vehicleResult__id--image"
+                  alt=""
+                />
+                <h3 class="vehicleResult__id--name">${vehicleObject.name}</h3>
+              </div>
+              <div class="vehicleResult__info">
+                <ul class="vehicleResult__info--list">
+                  <li>min Days ${vehicleObject.minDay}</li>
+                  <li>max Days ${vehicleObject.maxDay}</li>
+                </ul>
+                <div class="vehicleResult__info--iconList">
+                  <div>
+                    <i class="fas fa-users"></i>
+                    <h3>${vehicleObject.carrySize}</h3>
+                  </div>
+                  <div>
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <h3>4</h3>
+                  </div>
+                  <div>
+                    <i class="fas fa-suitcase"></i>
+                    <h3>6</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="vehicleResult__order">
+                <div class="vehicleResult__order--price">
+                  <h3>NZD: add price cal</h3>
+                  <h5>$${vehicleObject.price}/Day</h5>
+                  <button class="letsGoButton">
+                    Lets Go
+                  </button>
+                </div>
+                <div class="vehicleResult__order--details">
+                  <a href="#">
+                    <p class="vehicleResult__order--moreInfo">
+                      Get more details <i class="fas fa-external-link-alt"></i>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+  `;
+};
+
+//**********************************
+// TRIP SUMMARY --------------------
+//**********************************
+let updateDaysRenting = (daysRenting) => {
+  daysRentingContainer.html("Days: " + daysRenting);
+};
+let updatePartySize = (partySizeNumberCount) => {
+  partySizeContainer.html("People: " + partySizeNumberCount);
+};
+let updatePickUpDate = (newPickUpDate) => {
+  pickUpDateContainer.html(newPickUpDate);
+};
+let updateDropOffDate = (newDropOffDate) => {
+  dropOffDateCOntainer.html(newDropOffDate);
+};
+
+//**********************************
 // Events --------------------------
 //**********************************
-
 toggleMenuBtn.click(() => {
   navMenu.slideToggle(550, "easeInOutBack");
 });
 
+let showTripSummary = () => {
+  $(".rental-page__layout--trip-summary").show();
+};
+
 submitBtn.click(() => {
-  console.log("pick up from location " + pickUpLocation.val());
-  console.log("Drop off at location " + dropOffLocation.val());
-  console.log("Party size is of " + partySize.spinner("value") + " people");
-
-  console.log(picker.getStartDate());
-  console.log(picker.getStartDate().date());
-
+  //pick up drop off date
   pickUpDate = picker.getStartDate();
   dropOffDate = picker.getEndDate();
-  rentTimeRange = "Days of rent: " + (dropOffDate.diff(pickUpDate, "days") + 1);
 
-  console.log(rentTimeRange);
+  console.log(dropOffDate.format("DD/MM/YYYY"));
+  //Rent Time range
+  rentTimeRange = dropOffDate.diff(pickUpDate, "days") + 1;
+
+  //Days Renting
+  updateDaysRenting(rentTimeRange);
+  //Party Size
+  partySizeNumberCount = partySize.val();
+  updatePartySize(partySizeNumberCount);
+  //Pick Up Date
+  updatePickUpDate(pickUpDate.format("DD/MM/YY"));
+  //Drop Off Date
+  updateDropOffDate(dropOffDate.format("DD/MM/YY"));
+
+  showTripSummary();
 });
+
+init();

@@ -1,0 +1,52 @@
+{
+  "vehicles": [
+    {
+      "id": 0,
+      "name": "Motorbike",
+      "image": "https://images.unsplash.com/photo-1508357710528-af900c15fe96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80/300",
+      "carrySize": "1",
+      "carrySizeMin": 1,
+      "carrySizeMax": 1,
+      "price": 109,
+      "minDay": 1,
+      "maxDay": 5,
+      "fuelPer100km": 3.7
+    },
+    {
+      "id": 1,
+      "name": "Small Car",
+      "image": "https://images.unsplash.com/photo-1542245998-781afb31e3ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1354&q=80/300",
+      "carrySize": "1-2",
+      "carrySizeMin": 1,
+      "carrySizeMax": 2,
+      "price": 129,
+      "minDay": 1,
+      "maxDay": 10,
+      "fuelPer100km": 8.5
+    },
+    {
+      "id": 2,
+      "name": "Large Car",
+      "image": "https://images.unsplash.com/photo-1489307229055-9d55422662bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80/300",
+      "carrySize": "1-5",
+      "carrySizeMin": 1,
+      "carrySizeMax": 5,
+      "price": 144,
+      "minDay": 3,
+      "maxDay": 10,
+      "fuelPer100km": 9.7
+    },
+    {
+      "id": 3,
+      "name": "Motor Home",
+      "image": "https://images.unsplash.com/photo-1519001896312-85f41baa90a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80/300",
+      "carrySize": "2-6",
+      "carrySizeMin": 2,
+      "carrySizeMax": 6,
+      "price": 200,
+      "minDay": 2,
+      "maxDay": 15,
+      "fuelPer100km": 17
+    }
+  ]
+}

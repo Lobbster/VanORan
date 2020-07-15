@@ -112,12 +112,12 @@
             <div class="inputbox__form--peopleCount">
               <label for="partySize">Party Size</label>
               <select name="partySize" class="partySize" required>
-                <option value="0">1</option>
-                <option value="1">2</option>
-                <option value="2">3</option>
-                <option value="3">4</option>
-                <option value="4">5</option>
-                <option value="5">6</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
               </select>
             </div>
           </div>
@@ -138,7 +138,7 @@
             <div class="vehicleResult">
               <div class="vehicleResult__id">
                 <img
-                  src="https://images.unsplash.com/flagged/photo-1557774894-d113691ad112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1146&q=80"
+                  src="https://images.unsplash.com/flagged/photo-1557774894-d113691ad112?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1146&q=80/300"
                   class="vehicleResult__id--image"
                   alt=""
                 />
@@ -185,7 +185,35 @@
           </div>
         </div>
       </div>
-      <div class="rental-page__layout--trip-summary"></div>
+      <div class="rental-page__layout--trip-summary">
+        <div class="tripSummaryContainer">
+          <h2 class="tripSummaryContainer__title">Trip Summary</h2>
+          <h5 class="tripSummaryContainer__secondTitle">SEARCH RESULTS:</h5>
+          <div class="tripSummaryContainer__days-people">
+            <div class="tripSummaryContainer__days-people--daysRenting">
+              <h5>DAYS RENTING</h5>
+              <h2 class="daysRentingContainer">Days: 12</h2>
+            </div>
+            <div class="tripSummaryContainer__days-people--partySize">
+              <h5>PARTY SIZE</h5>
+              <h2 class="partySizeContainer">People: 4</h2>
+            </div>
+          </div>
+          <div class="tripSummaryContainer__date">
+            <div class="tripSummaryContainer__date--pickUp">
+              <h4>PICK UP</h4>
+              <h2 class="pickUpDateContainer">12/12/20</h2>
+            </div>
+            <div class="tripSummaryContainer__date--arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="tripSummaryContainer__date--dropOff">
+              <h4>DROP OFF</h4>
+              <h2 class="dropOffDateCOntainer">24/12/20</h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
