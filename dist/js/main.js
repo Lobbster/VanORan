@@ -11,11 +11,16 @@ const summativeParentNode = $(".tripSummaryContainer");
 const resultBox = $(".resultBox");
 
 let vehicleArray = [];
-
 let daysRentingContainer = summativeParentNode.find(".daysRentingContainer");
 let partySizeContainer = summativeParentNode.find(".partySizeContainer");
 let pickUpDateContainer = summativeParentNode.find(".pickUpDateContainer");
 let dropOffDateCOntainer = summativeParentNode.find(".dropOffDateCOntainer");
+let pickUpLocationContainer = summativeParentNode.find(
+  ".pickUpLocationContainer"
+);
+let dropOffLocationCOntainer = summativeParentNode.find(
+  ".dropOffLocationContainer"
+);
 
 //**********************************
 // INPUT FEILD ---------------------
@@ -25,14 +30,17 @@ let dropOffDate = {};
 let rentTimeRange;
 let partySize = form.find(".partySize");
 let partySizeNumberCount = 1;
+let pickUpLocation;
+let dropOffLocation;
 
-// CALENDAR -- LIGHT PICKER
+//**********************************
+// CALENDAR LIGHT PICKER -----------
+//**********************************
 let picker = new Lightpick({
   field: document.getElementById("datepicker-from"),
   secondField: document.getElementById("datepicker-to"),
   repick: true,
   singleDate: false,
-
   maxDays: 15,
   selectForward: true,
   onSelect: function (start, end) {
@@ -76,8 +84,9 @@ let makeVehicleOptionsd = (vehicleObject) => {
               </div>
               <div class="vehicleResult__info">
                 <ul class="vehicleResult__info--list">
-                  <li>min Days ${vehicleObject.minDay}</li>
-                  <li>max Days ${vehicleObject.maxDay}</li>
+                  <li>Min Days ${vehicleObject.minDay}</li>
+                  <li>Max Days ${vehicleObject.maxDay}</li>
+                  <li>Fuel ${vehicleObject.fuelPer100km}L/100km</li>
                 </ul>
                 <div class="vehicleResult__info--iconList">
                   <div>
@@ -96,7 +105,9 @@ let makeVehicleOptionsd = (vehicleObject) => {
               </div>
               <div class="vehicleResult__order">
                 <div class="vehicleResult__order--price">
-                  <h3>NZD: add price cal</h3>
+                  <h3>NZD: $${calculatePriceBasedOnDays(
+                    vehicleObject.price
+                  )}</h3>
                   <h5>$${vehicleObject.price}/Day</h5>
                   <button class="letsGoButton">
                     Lets Go
@@ -115,6 +126,13 @@ let makeVehicleOptionsd = (vehicleObject) => {
 };
 
 //**********************************
+// CALCULATE -----------------------
+//**********************************
+let calculatePriceBasedOnDays = (priceInput) => {
+  return partySizeNumberCount * priceInput;
+};
+
+//**********************************
 // TRIP SUMMARY --------------------
 //**********************************
 let updateDaysRenting = (daysRenting) => {
@@ -128,6 +146,12 @@ let updatePickUpDate = (newPickUpDate) => {
 };
 let updateDropOffDate = (newDropOffDate) => {
   dropOffDateCOntainer.html(newDropOffDate);
+};
+let updatePickUpLocation = (newPickUpLocation) => {
+  pickUpLocationContainer.html(newPickUpLocation);
+};
+let updateDropOffLocation = (newDropOffLocation) => {
+  dropOffLocationCOntainer.html(newDropOffLocation);
 };
 
 //**********************************
@@ -146,6 +170,10 @@ submitBtn.click(() => {
   pickUpDate = picker.getStartDate();
   dropOffDate = picker.getEndDate();
 
+  //Form Get
+  let pickUpLocation = form.find(".pick-up-location option:selected");
+  let dropOffLocation = form.find(".drop-off-location option:selected");
+
   console.log(dropOffDate.format("DD/MM/YYYY"));
   //Rent Time range
   rentTimeRange = dropOffDate.diff(pickUpDate, "days") + 1;
@@ -159,7 +187,11 @@ submitBtn.click(() => {
   updatePickUpDate(pickUpDate.format("DD/MM/YY"));
   //Drop Off Date
   updateDropOffDate(dropOffDate.format("DD/MM/YY"));
-
+  //Pick Up Location
+  updatePickUpLocation(pickUpLocation.text());
+  //Drop Off Location
+  updateDropOffLocation(dropOffLocation.text());
+  //show summary chart
   showTripSummary();
 });
 
