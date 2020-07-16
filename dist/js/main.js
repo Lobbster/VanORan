@@ -21,6 +21,8 @@ let pickUpLocationContainer = summativeParentNode.find(
 let dropOffLocationCOntainer = summativeParentNode.find(
   ".dropOffLocationContainer"
 );
+let distanceOfTravelContainer = summativeParentNode.find(".distanceOfTravel");
+let distanceInKm = 1;
 
 //**********************************
 // INPUT FEILD ---------------------
@@ -132,6 +134,27 @@ let calculatePriceBasedOnDays = (priceInput) => {
   return partySizeNumberCount * priceInput;
 };
 
+let distanceCalculation = (x, y) => {
+  console.log(x, y);
+  if (x > y) {
+    console.log("x is greater then");
+    return x - y;
+  }
+  console.log("x is less then");
+  return y - x;
+};
+
+//**********************************
+// FILTER --------------------------
+//**********************************
+let filterThroughVehicleArray = () => {
+  let filterOutSmall = (true) {
+    
+  }
+
+  vehicleArray.filter()
+};
+
 //**********************************
 // TRIP SUMMARY --------------------
 //**********************************
@@ -148,9 +171,15 @@ let updateDropOffDate = (newDropOffDate) => {
   dropOffDateCOntainer.html(newDropOffDate);
 };
 let updatePickUpLocation = (newPickUpLocation) => {
+  if (newPickUpLocation === "Pick Up Location") {
+    newPickUpLocation = "Please Pick A Location";
+  }
   pickUpLocationContainer.html(newPickUpLocation);
 };
 let updateDropOffLocation = (newDropOffLocation) => {
+  if (newDropOffLocation === "Drop Off Location") {
+    newDropOffLocation = "Please Pick A Location";
+  }
   dropOffLocationCOntainer.html(newDropOffLocation);
 };
 
@@ -174,7 +203,6 @@ submitBtn.click(() => {
   let pickUpLocation = form.find(".pick-up-location option:selected");
   let dropOffLocation = form.find(".drop-off-location option:selected");
 
-  console.log(dropOffDate.format("DD/MM/YYYY"));
   //Rent Time range
   rentTimeRange = dropOffDate.diff(pickUpDate, "days") + 1;
 
@@ -191,6 +219,16 @@ submitBtn.click(() => {
   updatePickUpLocation(pickUpLocation.text());
   //Drop Off Location
   updateDropOffLocation(dropOffLocation.text());
+  //Distance Calculation
+  distanceInKm = distanceCalculation(
+    parseInt(pickUpLocation.val()),
+    parseInt(dropOffLocation.val())
+  );
+  distanceOfTravelContainer.html(distanceInKm + " Km");
+
+  //Filter
+  filterThroughVehicleArray();
+
   //show summary chart
   showTripSummary();
 });

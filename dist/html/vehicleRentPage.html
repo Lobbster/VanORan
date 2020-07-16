@@ -85,13 +85,13 @@
               <label for="from">Pick Up Date</label>
               <input type="text" id="datepicker-from" required />
               <label for="from">Pick Up Location</label>
-              <select name="form" class="pick-up-location" required>
-                <option disabled selected>Pick Up Location</option>
-                <option value="0">Auckland</option>
-                <option value="1">Wellington</option>
-                <option value="2"> Christchurch</option>
-                <option value="3">Dunedin</option>
-                <option value="4">Queenstown</option>
+
+              <select class="pick-up-location" required>
+                <option value="" disabled selected>Pick Up Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
               </select>
             </div>
             <div class="inputbox__form--dropoff">
@@ -99,18 +99,17 @@
               <input type="text" id="datepicker-to" required />
               <label for="drop off">Drop Off Location</label>
 
-              <select name="location" class="drop-off-location" required>
-                <option disabled selected>Drop Off Location</option>
-                <option value="0">Auckland</option>
-                <option value="1">Wellington</option>
-                <option value="2"> Christchurch</option>
-                <option value="3">Dunedin</option>
-                <option value="4">Queenstown</option>
+              <select class="drop-off-location" required>
+                <option value="" disabled selected>Drop Off Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
               </select>
             </div>
             <div class="inputbox__form--peopleCount">
               <label for="partySize">Party Size</label>
-              <select name="partySize" class="partySize" required>
+              <select name="partySize" class="partySize">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -165,12 +164,16 @@
           </div>
           <div class="tripSummaryContainer__location">
             <div class="tripSummaryContainer__date--pickUp">
-              <h5>Pick Location</h5>
+              <h5>Pick-Up Location</h5>
               <h2 class="pickUpLocationContainer"></h2>
             </div>
             <div class="tripSummaryContainer__date--dropOff">
               <h5>Drop-Off Location</h5>
               <h2 class="dropOffLocationContainer"></h2>
+            </div>
+            <div class="tripSummaryContainer__date--distance">
+              <h5>Distance</h5>
+              <h2 class="distanceOfTravel"></h2>
             </div>
           </div>
         </div>
