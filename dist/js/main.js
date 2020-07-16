@@ -9,6 +9,7 @@ const form = $(".inputbox").submit(function (event) {
 const submitBtn = $(".inputbox__bottom--btn");
 const summativeParentNode = $(".tripSummaryContainer");
 const resultBox = $(".resultBox");
+const petrolPerLiter = 2.3;
 
 let vehicleArray = [];
 let daysRentingContainer = summativeParentNode.find(".daysRentingContainer");
@@ -22,14 +23,14 @@ let dropOffLocationCOntainer = summativeParentNode.find(
   ".dropOffLocationContainer"
 );
 let distanceOfTravelContainer = summativeParentNode.find(".distanceOfTravel");
-let distanceInKm = 1;
-
+let distanceInKm = 100;
+let newVehicleArray = [];
 //**********************************
 // INPUT FEILD ---------------------
 //**********************************
 let pickUpDate = {};
 let dropOffDate = {};
-let rentTimeRange;
+let rentTimeRange = 1;
 let partySize = form.find(".partySize");
 let partySizeNumberCount = 1;
 let pickUpLocation;
@@ -89,6 +90,10 @@ let makeVehicleOptionsd = (vehicleObject) => {
                   <li>Min Days ${vehicleObject.minDay}</li>
                   <li>Max Days ${vehicleObject.maxDay}</li>
                   <li>Fuel ${vehicleObject.fuelPer100km}L/100km</li>
+                  <li>FCE: $${fuelPerDistanceCost(
+                    vehicleObject.fuelPer100km
+                  )}</li>
+
                 </ul>
                 <div class="vehicleResult__info--iconList">
                   <div>
@@ -131,7 +136,7 @@ let makeVehicleOptionsd = (vehicleObject) => {
 // CALCULATE -----------------------
 //**********************************
 let calculatePriceBasedOnDays = (priceInput) => {
-  return partySizeNumberCount * priceInput;
+  return rentTimeRange * priceInput;
 };
 
 let distanceCalculation = (x, y) => {
@@ -144,15 +149,27 @@ let distanceCalculation = (x, y) => {
   return y - x;
 };
 
+let fuelPerDistanceCost = (fuelPer100km) => {
+  if (fuelPer100km * (distanceInKm / 100).toFixed(1) === 0) {
+    return parseInt(petrolPerLiter * fuelPer100km);
+  }
+  return parseInt(petrolPerLiter * (fuelPer100km * (distanceInKm / 100)));
+};
+
 //**********************************
 // FILTER --------------------------
 //**********************************
 let filterThroughVehicleArray = () => {
-  let filterOutSmall = (true) {
-    
-  }
-
-  vehicleArray.filter()
+  newVehicleArray = vehicleArray.filter((e) => {
+    return (
+      e.carrySizeMin <= partySizeNumberCount &&
+      e.carrySizeMax >= partySizeNumberCount &&
+      e.minDay <= rentTimeRange &&
+      e.maxDay >= rentTimeRange
+    );
+  });
+  console.log(newVehicleArray);
+  generateVehicleOptions(newVehicleArray);
 };
 
 //**********************************
