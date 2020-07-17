@@ -10,6 +10,8 @@ const submitBtn = $(".inputbox__bottom--btn");
 const summativeParentNode = $(".tripSummaryContainer");
 const resultBox = $(".resultBox");
 const petrolPerLiter = 2.3;
+const tripSummaryRetractButton = $(".tripSummaryContainer__button");
+let buttonPointer;
 
 let vehicleArray = [];
 let daysRentingContainer = summativeParentNode.find(".daysRentingContainer");
@@ -102,11 +104,11 @@ let makeVehicleOptionsd = (vehicleObject) => {
                   </div>
                   <div>
                     <i class="fas fa-suitcase-rolling"></i>
-                    <h3>4</h3>
+                    <h3>${vehicleObject.smallLuggage}</h3>
                   </div>
                   <div>
                     <i class="fas fa-suitcase"></i>
-                    <h3>6</h3>
+                    <h3>${vehicleObject.largeLuggage}</h3>
                   </div>
                 </div>
               </div>
@@ -199,6 +201,20 @@ let updateDropOffLocation = (newDropOffLocation) => {
   }
   dropOffLocationCOntainer.html(newDropOffLocation);
 };
+let loadInSummaryPointerButton = () => {
+  $(".rental-page__layout").append(
+    `<div class="buttonPointer"> <i class="fas fa-car"></i></div>`
+  );
+  buttonPointer = $(".buttonPointer");
+  buttonPointer.click(() => {
+    console.log("button hit");
+    $(".rental-page__layout--trip-summary").toggle(
+      "slide",
+      { direction: "right" },
+      500
+    );
+  });
+};
 
 //**********************************
 // Events --------------------------
@@ -208,8 +224,19 @@ toggleMenuBtn.click(() => {
 });
 
 let showTripSummary = () => {
-  $(".rental-page__layout--trip-summary").show();
+  if (window.innerWidth > 870) {
+    $(".rental-page__layout--trip-summary").show();
+  }
 };
+
+tripSummaryRetractButton.click(() => {
+  console.log("button hit");
+  $(".rental-page__layout--trip-summary").hide(
+    "slide",
+    { direction: "right" },
+    500
+  );
+});
 
 submitBtn.click(() => {
   //pick up drop off date
@@ -242,6 +269,8 @@ submitBtn.click(() => {
     parseInt(dropOffLocation.val())
   );
   distanceOfTravelContainer.html(distanceInKm + " Km");
+
+  loadInSummaryPointerButton();
 
   //Filter
   filterThroughVehicleArray();

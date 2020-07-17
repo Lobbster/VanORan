@@ -92,6 +92,34 @@
           transform: translateY(4px);
 }
 
+.buttonPointer {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  background: #18c8ff;
+  border: 3px dashed #0eaaed;
+  border-radius: 50px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 5px 6px 0px rgba(48, 50, 50, 0.23);
+          box-shadow: 0px 5px 6px 0px rgba(48, 50, 50, 0.23);
+}
+
+@media (max-width: 870px) {
+  .buttonPointer {
+    display: block;
+  }
+}
+
+.buttonPointer:hover {
+  cursor: pointer;
+}
+
+.buttonPointer i {
+  text-align: center;
+}
+
 .nav-bar {
   height: 50px;
   z-index: 2;
@@ -295,6 +323,7 @@
 }
 
 .vehicleLoadBox__results--title {
+  margin: 15px 0 10px;
   border-bottom: 1px solid #696969;
 }
 
@@ -416,6 +445,24 @@
 .tripSummaryContainer {
   height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.tripSummaryContainer__button {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5px;
+}
+
+.tripSummaryContainer__button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 870px) {
+  .tripSummaryContainer__button {
+    display: block;
+  }
 }
 
 .tripSummaryContainer__title {
@@ -494,12 +541,23 @@
 
 .rental-page__layout--trip-summary {
   display: none;
+  border-radius: 5px;
+  z-index: 2;
   height: 450px;
   width: 40%;
   min-width: 260px;
   margin-left: 25px;
   background-color: #f1f1f1;
   padding: 15px;
+}
+
+@media (max-width: 870px) {
+  .rental-page__layout--trip-summary {
+    position: absolute;
+    right: 0;
+    opacity: 95%;
+    border-left: 2px solid #18c8ff;
+  }
 }
 
 * {

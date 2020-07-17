@@ -1,0 +1,21 @@
+.buttonPointer {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  background: $clr-blue;
+  border: 3px dashed $clr-blue-dark;
+  border-radius: 50px;
+  z-index: 1;
+  box-shadow: $drp-shad;
+  @media (max-width: 870px) {
+    display: block;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  i {
+    text-align: center;
+  }
+}

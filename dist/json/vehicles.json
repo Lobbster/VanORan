@@ -10,7 +10,9 @@
       "price": 109,
       "minDay": 1,
       "maxDay": 5,
-      "fuelPer100km": 3.7
+      "fuelPer100km": 3.7,
+      "smallLuggage": 1,
+      "largeLuggage": 1
     },
     {
       "id": 1,
@@ -22,7 +24,9 @@
       "price": 129,
       "minDay": 1,
       "maxDay": 10,
-      "fuelPer100km": 8.5
+      "fuelPer100km": 8.5,
+      "smallLuggage": 2,
+      "largeLuggage": 2
     },
     {
       "id": 2,
@@ -34,7 +38,9 @@
       "price": 144,
       "minDay": 3,
       "maxDay": 10,
-      "fuelPer100km": 9.7
+      "fuelPer100km": 9.7,
+      "smallLuggage": 6,
+      "largeLuggage": 5
     },
     {
       "id": 3,
@@ -46,7 +52,9 @@
       "price": 200,
       "minDay": 2,
       "maxDay": 15,
-      "fuelPer100km": 17
+      "fuelPer100km": 17,
+      "smallLuggage": 8,
+      "largeLuggage": 6
     }
   ]
 }
