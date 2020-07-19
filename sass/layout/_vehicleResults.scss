@@ -13,18 +13,23 @@
     border: 1px solid $clr-blue;
   }
 
+  @media (max-width: 550px) {
+    grid-template-columns: 30% auto 100px;
+    column-gap: 20px;
+
+    &__info {
+      font-size: $liquidText;
+    }
+  }
   &__id {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     &--image {
-      width: 150px;
-      height: 90px;
+      width: 100%;
       background: no-repeat center;
       background-size: cover;
-    }
-    &--name {
     }
   }
 
@@ -38,7 +43,8 @@
       }
     }
     &--iconList {
-      width: 150px;
+      max-width: 150px;
+      min-width: 100px;
       display: flex;
       justify-content: space-between;
       div {

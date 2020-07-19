@@ -39,7 +39,7 @@ let pickUpLocation;
 let dropOffLocation;
 
 //**********************************
-// CALENDAR LIGHT PICKER -----------hello
+// CALENDAR LIGHT PICKER -----------
 //**********************************
 let picker = new Lightpick({
   field: document.getElementById("datepicker-from"),
@@ -203,15 +203,14 @@ let updateDropOffLocation = (newDropOffLocation) => {
 };
 let loadInSummaryPointerButton = () => {
   $(".rental-page__layout").append(
-    `<div class="buttonPointer"> <i class="fas fa-car"></i></div>`
+    `<div class="buttonPointer"><i class="fas fa-car"></i></div>`
   );
   buttonPointer = $(".buttonPointer");
   buttonPointer.click(() => {
-    console.log("button hit");
     $(".rental-page__layout--trip-summary").toggle(
       "slide",
       { direction: "right" },
-      500
+      200
     );
   });
 };
@@ -234,7 +233,7 @@ tripSummaryRetractButton.click(() => {
   $(".rental-page__layout--trip-summary").hide(
     "slide",
     { direction: "right" },
-    500
+    200
   );
 });
 
