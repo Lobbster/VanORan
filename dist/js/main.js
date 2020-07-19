@@ -39,7 +39,7 @@ let pickUpLocation;
 let dropOffLocation;
 
 //**********************************
-// CALENDAR LIGHT PICKER -----------
+// CALENDAR LIGHT PICKER -----------hello
 //**********************************
 let picker = new Lightpick({
   field: document.getElementById("datepicker-from"),
