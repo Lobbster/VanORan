@@ -71,40 +71,51 @@
           at it's finest
         </h1>
         <form action="/" method="GET" class="inputbox">
-          <h3 class="inputbox__subTitle">let's find your perfect vehicle</h3>
+          <h3 class="inputBox__title">
+            LET'S FIND YOUR IDEAL VEHICLE
+          </h3>
           <div class="inputbox__form">
             <div class="inputbox__form--pickup">
-              <label for="from">Pick Up</label>
+              <label for="from">Pick Up Date</label>
               <input type="text" id="datepicker-from" required />
-              <select name="location" class="pick-up-location" required>
-                <option disabled selected>Pick Up Location</option>
-                <option value="0">Auckland</option>
-                <option value="1">Wellington</option>
-                <option value="2"> Christchurch</option>
-                <option value="3">Dunedin</option>
-                <option value="4">Queenstown</option>
+              <label for="from">Pick Up Location</label>
+
+              <select class="pick-up-location" required>
+                <option value="" disabled selected>Pick Up Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
               </select>
             </div>
             <div class="inputbox__form--dropoff">
-              <label for="drop off">Drop Off</label>
+              <label for="drop off">Drop Off Date</label>
               <input type="text" id="datepicker-to" required />
-              <select name="location" class="drop-off-location" required>
-                <option disabled selected>Drop Off Location</option>
-                <option value="0">Auckland</option>
-                <option value="1">Wellington</option>
-                <option value="2"> Christchurch</option>
-                <option value="3">Dunedin</option>
-                <option value="4">Queenstown</option>
+              <label for="drop off">Drop Off Location</label>
+
+              <select class="drop-off-location" required>
+                <option value="" disabled selected>Drop Off Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
               </select>
             </div>
-            <div class="input__form--peopleCount">
-              <label for="drop off">Party size</label>
-              <input type="text" class="peopleCount" />
+            <div class="inputbox__form--peopleCount">
+              <label for="partySize">Party Size</label>
+              <select name="partySize" class="partySize">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
             </div>
           </div>
           <div class="inputbox__bottom">
-            <button type="submit" class="inputbox__bottom--btn">
-              Search
+            <button type="submit" class="glassButton">
+              <h4>Search</h4>
             </button>
           </div>
         </form>

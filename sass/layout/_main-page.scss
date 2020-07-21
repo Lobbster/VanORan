@@ -24,5 +24,24 @@
       text-transform: capitalize;
       font-size: 100px;
     }
+
+    form {
+      margin: 3% 10% 0 10%;
+      color: $clr-white;
+      background: none;
+      backdrop-filter: blur(2px);
+    }
+    input {
+      border: 1px solid $clr-white;
+      background: none;
+      border-radius: 5px;
+      color: $clr-white;
+    }
+    select {
+      border: 1px solid $clr-white;
+      background: none;
+      color: $clr-white;
+      border-radius: 5px;
+    }
   }
 }

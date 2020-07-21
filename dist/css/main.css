@@ -126,6 +126,33 @@
           transform-origin: center;
 }
 
+.glassButton {
+  width: 200px;
+  height: 30px;
+  background: none;
+  border: 1px solid #fefefe;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 50px;
+  color: #fefefe;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.glassButton:hover {
+  cursor: pointer;
+  color: #ffffffda;
+  border: 1px solid #ffffffda;
+}
+
+.glassButton:active {
+  color: #ffffff8a;
+  border: 1px solid #ffffff8a;
+}
+
 .nav-bar {
   height: 50px;
   z-index: 2;
@@ -205,6 +232,28 @@
   font-family: "lobster";
   text-transform: capitalize;
   font-size: 100px;
+}
+
+.main-page__container form {
+  margin: 3% 10% 0 10%;
+  color: #fefefe;
+  background: none;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.main-page__container input {
+  border: 1px solid #fefefe;
+  background: none;
+  border-radius: 5px;
+  color: #fefefe;
+}
+
+.main-page__container select {
+  border: 1px solid #fefefe;
+  background: none;
+  color: #fefefe;
+  border-radius: 5px;
 }
 
 .inputbox {
@@ -298,7 +347,8 @@
 .inputbox__form--peopleCount select {
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align-last: center;
+  font-size: 23px;
 }
 
 .inputbox__bottom {

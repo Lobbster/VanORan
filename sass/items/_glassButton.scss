@@ -1,0 +1,23 @@
+.glassButton {
+  width: 200px;
+  height: 30px;
+  background: none;
+  border: 1px solid $clr-white;
+  box-shadow: none;
+  border-radius: 50px;
+  color: $clr-white;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    color: $clr-pail-white;
+    border: 1px solid $clr-pail-white;
+  }
+  &:active {
+    color: $clr-pail-after;
+    border: 1px solid $clr-pail-after;
+  }
+}
