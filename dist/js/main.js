@@ -1,6 +1,9 @@
 //**********************************
 // CONSTANTS -----------------------
 //**********************************
+const glassSubmitButton = $(".glassButton");
+let inputBoxFrontPage = $(".inputBoxFrontPage");
+
 const toggleMenuBtn = $(".toggle-btn");
 const navMenu = $(".nav-menu");
 const form = $(".inputbox").submit(function (event) {
@@ -59,6 +62,7 @@ let picker = new Lightpick({
 // INITALISE -----------------------
 //**********************************
 let init = () => {
+  console.log("started up");
   $.getJSON("/dist/json/vehicles.json", (data) => {
     vehicleArray = data.vehicles;
     generateVehicleOptions(vehicleArray);
@@ -276,6 +280,11 @@ submitBtn.click(() => {
 
   //show summary chart
   showTripSummary();
+});
+
+inputBoxFrontPage.submit((e) => {
+  event.preventDefault();
+  console.log("submit");
 });
 
 init();

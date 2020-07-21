@@ -140,10 +140,10 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   outline: none;
+  cursor: pointer;
 }
 
 .glassButton:hover {
-  cursor: pointer;
   color: #ffffffda;
   border: 1px solid #ffffffda;
 }
@@ -247,6 +247,7 @@
   background: none;
   border-radius: 5px;
   color: #fefefe;
+  outline: none;
 }
 
 .main-page__container select {
@@ -254,6 +255,11 @@
   background: none;
   color: #fefefe;
   border-radius: 5px;
+  outline: none;
+}
+
+.main-page__container select option {
+  color: #222222;
 }
 
 .inputbox {

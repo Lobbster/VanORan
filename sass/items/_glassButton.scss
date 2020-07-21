@@ -11,8 +11,9 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   outline: none;
+  cursor: pointer;
+
   &:hover {
-    cursor: pointer;
     color: $clr-pail-white;
     border: 1px solid $clr-pail-white;
   }
