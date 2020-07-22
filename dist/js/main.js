@@ -1,8 +1,6 @@
 //**********************************
 // CONSTANTS -----------------------
 //**********************************
-const glassSubmitButton = $(".glassButton");
-let inputBoxFrontPage = $(".inputBoxFrontPage");
 
 const toggleMenuBtn = $(".toggle-btn");
 const navMenu = $(".nav-menu");
@@ -280,11 +278,6 @@ submitBtn.click(() => {
 
   //show summary chart
   showTripSummary();
-});
-
-inputBoxFrontPage.submit((e) => {
-  event.preventDefault();
-  console.log("submit");
 });
 
 init();

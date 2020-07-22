@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Muli:wght@200;300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
@@ -30,14 +36,13 @@
 
     <title>VanORan Rentals</title>
   </head>
-  <body class="home-page">
+  <body class="rental-page">
+    <div class="rental-page__nav-container"></div>
     <header class="main-page">
       <div class="main-page__container">
         <nav>
           <div class="nav-bar">
-            <a href="index.html"
-              ><div class="nav-bar__logo logo">VanORan</div></a
-            >
+            <a href="#"><div class="nav-bar__logo logo">VanORan</div></a>
             <a href="#" class="toggle-btn">
               <span class="toggle-btn__span"></span>
               <span class="toggle-btn__span"></span>
@@ -48,7 +53,7 @@
               <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
               <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
               <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
-              <a href="html/vehicleRentPage.html">
+              <a href="#">
                 <li class="nav-bar__list--items">Book Now</li>
               </a>
             </ul>
@@ -70,11 +75,18 @@
           see new zealand <br />
           at it's finest
         </h1>
-        <form
-          action="html/vehicleRentPage.html"
-          method="GET"
-          class="inputbox inputBoxFrontPage"
-        >
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,224L120,234.7C240,245,480,267,720,261.3C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+      </svg>
+    </header>
+    <div class="rental-page__layout">
+      <div class="rental-page__layout--application-container">
+        <form action="/" method="GET" class="inputbox">
           <h3 class="inputBox__title">
             LET'S FIND YOUR IDEAL VEHICLE
           </h3>
@@ -118,16 +130,68 @@
             </div>
           </div>
           <div class="inputbox__bottom">
-            <button
-              type="submit"
-              class="glassButton"
-              formaction="html/vehicleRentPage.html"
-            >
+            <button type="submit" class="inputbox__bottom--btn bigBlueButton">
               <h4>Search</h4>
             </button>
           </div>
         </form>
+        <div class="vehicleLoadBox">
+          <div class="vehicleLoadBox__results">
+            <h4 class="vehicleLoadBox__results--title">Results</h4>
+            <h5 class="vehicleLoadBox__results--result-count">
+              Toatal Results:
+            </h5>
+          </div>
+          <div class="resultBox"></div>
+        </div>
       </div>
-    </header>
+
+      <div class="rental-page__layout--trip-summary">
+        <div class="tripSummaryContainer">
+          <div class="tripSummaryContainer__button">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <h2 class="tripSummaryContainer__title">Trip Summary</h2>
+          <h5 class="tripSummaryContainer__secondTitle">SEARCH RESULTS:</h5>
+          <div class="tripSummaryContainer__days-people">
+            <div class="tripSummaryContainer__days-people--daysRenting">
+              <h5>DAYS RENTING</h5>
+              <h2 class="daysRentingContainer">Days: 12</h2>
+            </div>
+            <div class="tripSummaryContainer__days-people--partySize">
+              <h5>PARTY SIZE</h5>
+              <h2 class="partySizeContainer">People: 4</h2>
+            </div>
+          </div>
+          <div class="tripSummaryContainer__date">
+            <div class="tripSummaryContainer__date--pickUp">
+              <h4>PICK UP</h4>
+              <h2 class="pickUpDateContainer">12/12/20</h2>
+            </div>
+            <div class="tripSummaryContainer__date--arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="tripSummaryContainer__date--dropOff">
+              <h4>DROP OFF</h4>
+              <h2 class="dropOffDateCOntainer">24/12/20</h2>
+            </div>
+          </div>
+          <div class="tripSummaryContainer__location">
+            <div class="tripSummaryContainer__date--pickUp">
+              <h5>Pick-Up Location</h5>
+              <h2 class="pickUpLocationContainer"></h2>
+            </div>
+            <div class="tripSummaryContainer__date--dropOff">
+              <h5>Drop-Off Location</h5>
+              <h2 class="dropOffLocationContainer"></h2>
+            </div>
+            <div class="tripSummaryContainer__date--distance">
+              <h5>Distance</h5>
+              <h2 class="distanceOfTravel"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

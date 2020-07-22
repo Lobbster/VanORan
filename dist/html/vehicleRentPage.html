@@ -38,43 +38,48 @@
 
     <title>VanORan Rentals</title>
   </head>
-  <body class="rental-page">
-    <div class="rental-page__nav-container">
-      <nav class="nav">
-        <div class="nav-bar drop-shad">
-          <a href="/dist/index.html"
-            ><div class="nav-bar__logo logo">VanORan</div></a
-          >
-          <a href="#" class="toggle-btn">
-            <span class="toggle-btn__span add"></span>
-            <span class="toggle-btn__span add"></span>
-            <span class="toggle-btn__span add"></span>
-          </a>
-          <ul class="nav-bar__list">
-            <a href="#"><li class="nav-bar__list--items">Vehicles</li></a>
-            <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
-            <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
-            <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
-            <a href="vehicleRentPage.html">
-              <li class="nav-bar__list--items">Book Now</li>
-            </a>
-          </ul>
-        </div>
-        <div class="nav-menu">
-          <h1 class="nav-menu__title">Menu</h1>
-          <ul class="nav-menu__list">
-            <a href="#"><li class="nav-menu__list--items">Vehicles</li></a>
-            <a href="#"><li class="nav-menu__list--items">Blog</li></a>
-            <a href="#"><li class="nav-menu__list--items">About Us</li></a>
-            <a href="#"><li class="nav-menu__list--items">Contact Us</li></a>
-            <a href="vehicleRentPage.html"
-              ><li class="nav-menu__list--items">Book Now</li></a
-            >
-          </ul>
-        </div>
-      </nav>
-    </div>
 
+  <body class="rental-page">
+    <div class="rental-page__nav-container"></div>
+    <header class="main-page">
+      <div class="main-page__container">
+        <nav>
+          <div class="nav-bar">
+            <a href="#"><div class="nav-bar__logo logo">VanORan</div></a>
+            <a href="#" class="toggle-btn">
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
+            </a>
+            <ul class="nav-bar__list">
+              <a href="#"><li class="nav-bar__list--items">Vehicles</li></a>
+              <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
+              <a href="#">
+                <li class="nav-bar__list--items">Book Now</li>
+              </a>
+            </ul>
+          </div>
+          <div class="nav-menu">
+            <h1 class="nav-menu__title">Menu</h1>
+            <ul class="nav-menu__list">
+              <a href="#"><li class="nav-menu__list--items">Vehicles</li></a>
+              <a href="#"><li class="nav-menu__list--items">Blog</li></a>
+              <a href="#"><li class="nav-menu__list--items">About Us</li></a>
+              <a href="#"><li class="nav-menu__list--items">Contact Us</li></a>
+              <a href="html/vehicleRentPage.html"
+                ><li class="nav-menu__list--items">Book Now</li></a
+              >
+            </ul>
+          </div>
+        </nav>
+        <h1 class="main-page__container--title">
+          see new zealand <br />
+          at it's finest
+        </h1>
+      </div>
+    </header>
     <div class="rental-page__layout">
       <div class="rental-page__layout--application-container">
         <form action="/" method="GET" class="inputbox">
@@ -185,4 +190,100 @@
       </div>
     </div>
   </body>
+  <!-- <body class="home-page">
+    <header class="main-page">
+      <div class="main-page__container">
+        <nav>
+          <div class="nav-bar">
+            <a href="index.html"
+              ><div class="nav-bar__logo logo">VanORan</div></a
+            >
+            <a href="#" class="toggle-btn">
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
+              <span class="toggle-btn__span"></span>
+            </a>
+            <ul class="nav-bar__list">
+              <a href="#"><li class="nav-bar__list--items">Vehicles</li></a>
+              <a href="#"> <li class="nav-bar__list--items">Blog</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">About Us</li> </a>
+              <a href="#"> <li class="nav-bar__list--items">Contact Us</li> </a>
+              <a href="html/vehicleRentPage.html">
+                <li class="nav-bar__list--items">Book Now</li>
+              </a>
+            </ul>
+          </div>
+          <div class="nav-menu">
+            <h1 class="nav-menu__title">Menu</h1>
+            <ul class="nav-menu__list">
+              <a href="#"><li class="nav-menu__list--items">Vehicles</li></a>
+              <a href="#"><li class="nav-menu__list--items">Blog</li></a>
+              <a href="#"><li class="nav-menu__list--items">About Us</li></a>
+              <a href="#"><li class="nav-menu__list--items">Contact Us</li></a>
+              <a href="html/vehicleRentPage.html"
+                ><li class="nav-menu__list--items">Book Now</li></a
+              >
+            </ul>
+          </div>
+        </nav>
+        <h1 class="main-page__container--title">
+          see new zealand <br />
+          at it's finest
+        </h1>
+        <form
+          action="html/vehicleRentPage.html"
+          method="GET"
+          class="inputbox inputBoxFrontPage"
+        >
+          <h3 class="inputBox__title">
+            LET'S FIND YOUR IDEAL VEHICLE
+          </h3>
+          <div class="inputbox__form">
+            <div class="inputbox__form--pickup">
+              <label for="from">Pick Up Date</label>
+              <input type="text" id="datepicker-from" required />
+              <label for="from">Pick Up Location</label>
+
+              <select class="pick-up-location" required>
+                <option value="" disabled selected>Pick Up Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
+              </select>
+            </div>
+            <div class="inputbox__form--dropoff">
+              <label for="drop off">Drop Off Date</label>
+              <input type="text" id="datepicker-to" required />
+              <label for="drop off">Drop Off Location</label>
+
+              <select class="drop-off-location" required>
+                <option value="" disabled selected>Drop Off Location</option>
+                <option value="1">Auckland</option>
+                <option value="642">Wellington</option>
+                <option value="1075">Christchurch</option>
+                <option value="1551">Queenstown</option>
+              </select>
+            </div>
+            <div class="inputbox__form--peopleCount">
+              <label for="partySize">Party Size</label>
+              <select name="partySize" class="partySize">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputbox__bottom">
+            <button type="submit" class="glassButton">
+              <h4>Search</h4>
+            </button>
+          </div>
+        </form>
+      </div>
+    </header>
+  </body> -->
 </html>
