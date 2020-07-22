@@ -192,17 +192,12 @@
   color: #fefefe;
 }
 
-.nav-bar__list--items:hover:hover {
-  color: rebeccapurple;
+.nav-bar__list--items:hover ~ .nav-bar__list--items {
+  color: #696969;
 }
 
-.nav-bar__list--items:hover:hover ~ .nav-bar__list--items:hover--items {
-  color: red;
-}
-
-.nav-bar.drop-shad {
-  -webkit-box-shadow: 0px 5px 6px 0px rgba(48, 50, 50, 0.23), inset 0px 4px 0px 0px #18c8ff;
-          box-shadow: 0px 5px 6px 0px rgba(48, 50, 50, 0.23), inset 0px 4px 0px 0px #18c8ff;
+.nav-bar__list:not(:focus-within):not(:hover) .hover {
+  color: #696969;
 }
 
 @media (max-width: 1024px) {

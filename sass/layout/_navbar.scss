@@ -26,20 +26,17 @@
 
     &--items {
       color: $clr-white;
-      &:hover {
-        &:hover {
-          color: rebeccapurple;
-        }
 
-        &:hover ~ &--items {
-          color: red;
-        }
+      &:hover ~ & {
+        color: $clr-grey;
       }
     }
   }
+}
 
-  &.drop-shad {
-    box-shadow: $drp-shad, $in-shad;
+.nav-bar__list:not(:focus-within):not(:hover) {
+  .hover {
+    color: $clr-grey;
   }
 }
 
