@@ -211,8 +211,11 @@
 .main-page {
   width: 100%;
   height: 600px;
-  background: url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0099db), color-stop(75%, rgba(0, 212, 255, 0))), url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat;
+  background: linear-gradient(180deg, #0099db, rgba(0, 212, 255, 0) 75%), url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat;
+  background-position: center bottom;
   background-size: cover;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,6 +233,7 @@
 }
 
 .main-page__container--title {
+  width: 80%;
   z-index: 1;
   position: absolute;
   left: 10%;
@@ -240,6 +244,12 @@
   color: #fefefe;
   font-family: "lobster";
   text-transform: capitalize;
+}
+
+@media (max-width: 1200px) {
+  .main-page__container--title {
+    font-size: calc(100px + 20 * ((100vw - 1000px) / 1400));
+  }
 }
 
 .main-page svg {
@@ -354,7 +364,7 @@
   width: 100%;
   position: absolute;
   z-index: 3;
-  background-color: #18c8ff;
+  background-color: #0099db;
   text-align: center;
 }
 

@@ -1,7 +1,6 @@
 //**********************************
 // CONSTANTS -----------------------
 //**********************************
-
 const toggleMenuBtn = $(".toggle-btn");
 const navMenu = $(".nav-menu");
 const form = $(".inputbox").submit(function (event) {
@@ -28,6 +27,7 @@ let dropOffLocationCOntainer = summativeParentNode.find(
 let distanceOfTravelContainer = summativeParentNode.find(".distanceOfTravel");
 let distanceInKm = 100;
 let newVehicleArray = [];
+
 //**********************************
 // INPUT FEILD ---------------------
 //**********************************

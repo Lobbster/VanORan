@@ -17,3 +17,6 @@ $in-shad: inset 0px 4px 0px 0px $clr-blue;
 
 //Liquid Text
 $liquidText: calc(12px + 6 * ((100vw - 320px) / 680));
+$bigLiquidText: calc(100px + 20 * ((100vw - 1000px) / 1400));
+
+$gry-blue: linear-gradient(180deg, #0099db, rgba(0, 212, 255, 0) 75%);

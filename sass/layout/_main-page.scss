@@ -1,9 +1,13 @@
 .main-page {
   width: 100%;
   height: 600px;
-  background: url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat
-    center;
+
+  background: $gry-blue,
+    url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat;
+  background-position: center bottom;
   background-size: cover;
+  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,6 +17,7 @@
     width: 100%;
 
     &--title {
+      width: 80%;
       z-index: 1;
       position: absolute;
       left: 10%;
@@ -23,6 +28,10 @@
       color: $clr-white;
       font-family: "lobster";
       text-transform: capitalize;
+
+      @media (max-width: 1200px) {
+        font-size: $bigLiquidText;
+      }
     }
   }
 
