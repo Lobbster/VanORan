@@ -22,10 +22,18 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     &--items {
+      color: $clr-white;
       &:hover {
-        text-decoration: underline;
+        &:hover {
+          color: rebeccapurple;
+        }
+
+        &:hover ~ &--items {
+          color: red;
+        }
       }
     }
   }

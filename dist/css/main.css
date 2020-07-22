@@ -185,10 +185,19 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 
-.nav-bar__list--items:hover {
-  text-decoration: underline;
+.nav-bar__list--items {
+  color: #fefefe;
+}
+
+.nav-bar__list--items:hover:hover {
+  color: rebeccapurple;
+}
+
+.nav-bar__list--items:hover:hover ~ .nav-bar__list--items:hover--items {
+  color: red;
 }
 
 .nav-bar.drop-shad {
@@ -213,9 +222,8 @@
   height: 600px;
   background: -webkit-gradient(linear, left top, left bottom, from(#0099db), color-stop(75%, rgba(0, 212, 255, 0))), url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat;
   background: linear-gradient(180deg, #0099db, rgba(0, 212, 255, 0) 75%), url(/dist/image/photo-1513350949-6bd4ab6ff7f8.jpg) no-repeat;
-  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,12 +252,6 @@
   color: #fefefe;
   font-family: "lobster";
   text-transform: capitalize;
-}
-
-@media (max-width: 1200px) {
-  .main-page__container--title {
-    font-size: calc(100px + 20 * ((100vw - 1000px) / 1400));
-  }
 }
 
 .main-page svg {
@@ -363,6 +365,7 @@
   display: none;
   width: 100%;
   position: absolute;
+  opacity: 98%;
   z-index: 3;
   background-color: #0099db;
   text-align: center;
@@ -576,13 +579,23 @@
           align-items: center;
 }
 
-@media (max-width: 1400px) {
-  .tripSummaryContainer__days-people {
-    width: 90%;
-  }
-  .tripSummaryContainer__date {
-    width: 90%;
-  }
+.tripSummaryContainer__location {
+  width: 80%;
+  padding-top: 25px;
+  border-top: 2px dashed #222222;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto 100px;
+      grid-template-columns: 100px auto 100px;
+}
+
+.tripSummaryContainer__location--dropOff {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+.tripSummaryContainer__distance {
+  margin-top: 20px;
 }
 
 @media (max-width: 1300px) {
@@ -590,6 +603,9 @@
     width: 100%;
   }
   .tripSummaryContainer__date {
+    width: 100%;
+  }
+  .tripSummaryContainer__location {
     width: 100%;
   }
 }
