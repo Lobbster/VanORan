@@ -188,12 +188,12 @@
   cursor: pointer;
 }
 
-.nav-bar__list--items {
-  color: #fefefe;
+.nav-bar__list:hover {
+  color: #696969;
 }
 
-.nav-bar__list--items:hover ~ .nav-bar__list--items {
-  color: #696969;
+.nav-bar__list--items {
+  color: #fefefe;
 }
 
 .nav-bar__list:not(:focus-within):not(:hover) .hover {
