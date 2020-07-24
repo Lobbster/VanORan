@@ -25,17 +25,17 @@
     cursor: pointer;
 
     &:hover {
-      color: $clr-grey;
+      li {
+        color: #044e6e;
+      }
     }
 
     &--items {
       color: $clr-white;
-      // &:hover {
-      //   color: $clr-white;
-      // }
-      // &:hover ~ & {
-      //   color: $clr-grey;
-      // }
+
+      &:hover {
+        color: $clr-white !important;
+      }
     }
   }
 }
